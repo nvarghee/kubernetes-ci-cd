@@ -30,7 +30,7 @@ spec:
         tier: hello-kenzan
     spec:
       containers:
-      - image: 127.0.0.1:30912/hellokenzan:latest
+      - image: 192.168.0.172:30912/hellokenzan:latest
         name: hello-kenzan
         ports:
         - containerPort: 80
