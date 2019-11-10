@@ -12,7 +12,8 @@ node {
     imageName = "${registryHost}${appName}:${tag}"
     env.BUILDIMG=imageName
     
-    sh "minikube docker-env"
+    sh "minikube docker-env > env-change.bat"
+    env-change.bat
 
     stage "Build"
     
