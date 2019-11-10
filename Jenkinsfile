@@ -15,6 +15,11 @@ node {
     sh "minikube docker-env > env-change.bat"
     bat "env-change.bat"
     sh "docker images"
+    bat "SET DOCKER_TLS_VERIFY=1"
+    bat "SET DOCKER_HOST=tcp://172.17.157.90:2376"
+    bat "SET DOCKER_CERT_PATH=C:\Users\nisha\.minikube\certs"
+    bat "REM @FOR /f "tokens=*" %i IN ('minikube docker-env') DO @%i"
+    sh "docker images"
 
     stage "Build"
     
