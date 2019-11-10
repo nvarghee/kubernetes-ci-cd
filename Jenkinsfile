@@ -11,6 +11,8 @@ node {
     registryHost = "127.0.0.1:30400/"
     imageName = "${registryHost}${appName}:${tag}"
     env.BUILDIMG=imageName
+    
+    sh 'minikube docker-env"
 
     stage "Build"
     
