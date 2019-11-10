@@ -14,6 +14,7 @@ node {
     
     sh "minikube docker-env > env-change.bat"
     bat "env-change.bat"
+    sh "docker images"
 
     stage "Build"
     
