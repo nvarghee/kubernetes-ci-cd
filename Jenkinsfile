@@ -13,7 +13,7 @@ node {
     env.BUILDIMG=imageName
     
     sh "minikube docker-env > env-change.bat"
-    env-change.bat
+    bat "env-change.bat"
 
     stage "Build"
     
