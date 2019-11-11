@@ -16,7 +16,7 @@ node {
     bat "env-change.bat"
     sh "docker images"
     env.DOCKER_TLS_VERIFY="1"
-    env.DOCKER_HOST="tcp://172.17.157.90:2376"
+    env.DOCKER_HOST="tcp://192.168.230.109:2376"
     env.DOCKER_CERT_PATH="C:\\Users\\nisha\\.minikube\\certs"
     sh "echo %DOCKER_TLS_VERIFY%"
     sh "docker images"
