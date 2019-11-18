@@ -33,7 +33,6 @@ node {
     stage "Publish"
         withCredentials([conjurSecretCredential(credentialsId: '53bc659e-7dbd-4072-8d3d-d5a42960f0b8', 
       variable: 'DOCKER_PASSWORD')]) {
-            sh "echo $DOCKER_PASSWORD"
             sh "docker login -u nisha1shine -p $DOCKER_PASSWORD"
             sh "docker tag ${imageName} nisha1shine/testimage"
             sh "docker commit ${registryHost}${appName} nisha1shine/testimage"
