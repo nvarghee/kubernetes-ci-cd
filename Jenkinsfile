@@ -16,6 +16,7 @@ node {
     env.DOCKER_HOST="tcp:///172.18.105.141:2376"
     env.DOCKER_CERT_PATH="C:\\Users\\nisha\\.minikube\\certs"
     sh "minikube docker-env"
+    sh "docker images"
     
     stage "Build"
     
