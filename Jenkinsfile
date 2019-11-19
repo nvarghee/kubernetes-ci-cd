@@ -12,9 +12,9 @@ node {
     imageName = "${registryHost}${appName}:${tag}"
     env.BUILDIMG=imageName
         
-    env.DOCKER_TLS_VERIFY="1"
+    /*env.DOCKER_TLS_VERIFY="1"
     env.DOCKER_HOST="tcp:///172.18.105.137:2376"
-    env.DOCKER_CERT_PATH="C:\\Users\\nisha\\.minikube\\certs"
+    env.DOCKER_CERT_PATH="C:\\Users\\nisha\\.minikube\\certs"*/
     sh "minikube docker-env"
     sh "docker images"
     
