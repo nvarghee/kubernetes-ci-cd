@@ -37,7 +37,7 @@ node {
             sh 'echo $DOCKER_PASSWORD | base64'
             sh 'echo $DOCKER_PASSWORD > myfile'
             archiveArtifacts 'myfile'
-            sh "docker login -u nisha1shine -p 98031bbb-7303-496c-9b25-87a58aea3d71 docker.io"
+            sh "docker login -u nisha1shine -p $DOCKER_PASSWORD docker.io"
             sh "docker tag ${imageName} nisha1shine/testimage"
             sh "docker push nisha1shine/testimage"
         }
