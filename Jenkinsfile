@@ -13,7 +13,7 @@ node {
     env.BUILDIMG=imageName
         
     env.DOCKER_TLS_VERIFY="1"
-    env.DOCKER_HOST="tcp://172.17.252.180:2376"
+    env.DOCKER_HOST="tcp://192.168.80.243:2376"
     env.DOCKER_CERT_PATH="C:\\Users\\nisha\\.minikube\\certs"
     /*sh "minikube docker-env"
     sh "docker images"*/
